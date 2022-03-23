@@ -1,8 +1,0 @@
-services:
-    worker:
-        build: .
-        env_file: config.env
-        deploy:
-            restart_policy:
-                condition: on-failure
-                max_attempts: 3
