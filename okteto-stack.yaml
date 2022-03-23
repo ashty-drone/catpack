@@ -2,7 +2,7 @@ services:
     worker:
         build: .
         env_file:
-          - setup/.env
+          - setup/default.env
           - config.env
         environment:
           ALIVE_NAME: ${ALIVE_NAME}
