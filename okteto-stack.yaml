@@ -1,7 +1,6 @@
 services:
     worker:
         build: .
-        environment:
             COMMAND_HAND_LER: ${COMMAND_HAND_LER}
             DATABASE_URL: ${DATABASE_URL}
             STRING_SESSION: ${STRING_SESSION}
