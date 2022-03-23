@@ -3,7 +3,6 @@ services:
         build: .
         env_file: config.env
         environment:
-            ALIVE_NAME: ${ALIVE_NAME}
             COMMAND_HAND_LER: ${COMMAND_HAND_LER}
             DATABASE_URL: ${DATABASE_URL}
             STRING_SESSION: ${STRING_SESSION}
