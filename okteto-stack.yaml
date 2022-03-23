@@ -1,7 +1,6 @@
 services:
     worker:
         build: .
-        env_file: config.env
         environment:
             COMMAND_HAND_LER: ${COMMAND_HAND_LER}
             DATABASE_URL: ${DATABASE_URL}
