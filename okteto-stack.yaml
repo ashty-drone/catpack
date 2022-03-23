@@ -5,13 +5,12 @@ services:
             restart_policy:
                 condition: on-failure
                 max_attempts: 5
+        env_file: config.env
         environment:
             ALIVE_NAME: $ALIVE_NAME
             APP_ID: $APP_ID
-            API_HASH: $API_HASH
             COMMAND_HAND_LER: $COMMAND_HAND_LER
             DATABASE_URL: $DATABASE_URL
-            ENV: $ENV
             STRING_SESSION: $STRING_SESSION
             TG_BOT_TOKEN: $TG_BOT_TOKEN
             UPSTREAM_REPO: ${UPSTREAM_REPO}
