@@ -1,10 +1,6 @@
 services:
     worker:
         build: .
-        deploy:
-            restart_policy:
-                condition: on-failure
-                max_attempts: 5
         env_file: config.env
         environment:
             ALIVE_NAME: ${ALIVE_NAME}
