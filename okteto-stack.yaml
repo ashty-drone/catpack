@@ -3,7 +3,7 @@ services:
         build: .
         deploy:
             restart_policy:
-                max_attempts: 5
+                max_attempts: 2
         env_file: config.env
         environment:
           ALIVE_NAME: ${ALIVE_NAME}
