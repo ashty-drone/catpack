@@ -1,11 +1,7 @@
 # Catuserbot-Deploypack
-This is just Heroku support source. 
+This is just Oketeto support source. 
 Main source is [here](https://github.com/TgCatUB/catuserbot). Fork and give star to that repo.
 
 ## Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ashty-drone/CatTemplate19)
+[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy)
 
-
-## Credits
-   - [@midnightmadwalk](https://t.me/midnightmadwalk)
-   - [@DeletedUser420](https://t.me/DeletedUser420)
