@@ -1,7 +1,9 @@
 services:
     worker:
         build: .
-        env_file: config.env
+        env_file:
+          - setup/.env
+          - config.env
         environment:
           ALIVE_NAME: ${ALIVE_NAME}
           APP_ID: ${APP_ID}
