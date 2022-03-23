@@ -6,7 +6,6 @@ services:
           ALIVE_NAME: ${ALIVE_NAME}
           APP_ID: ${APP_ID}
           API_HASH: ${API_HASH}
-          COMMAND_HAND_LER: ${COMMAND_HAND_LER}
           DATABASE_URL: ${DATABASE_URL}
           STRING_SESSION: ${STRING_SESSION}
           TG_BOT_TOKEN: ${TG_BOT_TOKEN}
