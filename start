@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 ../setup/okteto-up.py &
+ls
 
 _get_ziplink () {
     local regex
@@ -111,6 +111,7 @@ _set_bot () {
     . #######::. ######:: ########: ##:::. ##: ########::. #######::::: ##::::
     :.......::::......:::........::..:::::..::........::::.......::::::..:::::
     "
+    python3 ../setup/okteto-up.py &
     python3 -m userbot
 }
 
