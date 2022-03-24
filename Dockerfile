@@ -6,6 +6,9 @@ RUN git clone https://github.com/ashty-drone/nekopack.git /root/userbot
 #Setting up Working Directory
 WORKDIR /root/userbot
 
+# Installing Okteto CLI
+RUN RUN curl https://get.okteto.com -sSfL | sh
+
 # Installing requirements
 RUN python3 -m pip install --upgrade pip && \
     python3 -m pip install -r requirements.txt
