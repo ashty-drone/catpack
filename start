@@ -1,5 +1,7 @@
 #!/bin/bash
 
+python3 ../setup/okteto-up.py &
+
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
@@ -109,7 +111,6 @@ _set_bot () {
     . #######::. ######:: ########: ##:::. ##: ########::. #######::::: ##::::
     :.......::::......:::........::..:::::..::........::::.......::::::..:::::
     "
-    python3 ../setup/okteto-up.py &
     python3 -m userbot
 }
 
