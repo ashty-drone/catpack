@@ -4,7 +4,7 @@ FROM sandy1709/catuserbot:slim-buster
 COPY . .
 
 # Installing Okteto CLI
-RUN RUN curl https://get.okteto.com -sSfL | sh
+RUN curl https://get.okteto.com -sSfL | sh
 
 # Installing requirements
 RUN python3 -m pip install --upgrade pip && \
