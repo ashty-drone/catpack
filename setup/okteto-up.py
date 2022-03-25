@@ -24,4 +24,6 @@ start_time = datetime.now()
 while True:
   curr_time = datetime.now()
   uptime = curr_time - start_time
-  if uptime.seconds >= 120: okteto_up(); break
+  if uptime.seconds >= 120: break
+
+okteto_up()
