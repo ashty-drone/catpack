@@ -1,8 +1,10 @@
 def okteto_up():
   import os
   from logging import getLogger
+  token = os.environ.get("OKTETO_ACCESS_TOKEN")
+  if not token: return getLogger("OKTETO").warning("Set OKTETO_ACCESS_TOKEN!!")
   getLogger("OKTETO").warning("RESTARTING!!")
-  return os.system(string.format(os.environ.get("OKTETO_ACCESS_TOKEN")))
+  return os.system(string.format(token))
 
 string = """\
 okteto context use https://cloud.okteto.com --token {}
