@@ -3,8 +3,6 @@ from sys import exit
 
 token = os.environ.get("OKTETO_TOKEN")
 if not token: exit("#"*10 + "\nSet OKTETO_TOKEN!!" + "#"*10)
-
-Deployed = False
   
 def okteto_up():
   from logging import getLogger
@@ -22,7 +20,7 @@ okteto deploy
 from datetime import datetime
 start_time = datetime.now()
 
-while not Deployed:
+while True:
   curr_time = datetime.now()
   uptime = curr_time - start_time
-  if uptime.seconds >= 120: Deployed = True; okteto_up()
+  if uptime.seconds >= 120: okteto_up(); break
