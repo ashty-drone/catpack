@@ -9,7 +9,7 @@ OKTETO = dict()
 def okteto_up():
   from logging import getLogger
   getLogger("OKTETO").warning("RESTARTING!!")
-  return os.system(string.format(token, token))
+  return os.system(string.format(token))
 
 string = """\
 okteto context use https://cloud.okteto.com --token {}
@@ -22,9 +22,9 @@ okteto push
 from datetime import datetime
 start_time = datetime.now()
 
-OKTETO.update({"is_deployed"}: False})
+OKTETO.update({"deployed"}: False})
 
-while True:
+while not OKTETO["deployed"]:
   curr_time = datetime.now()
   uptime = curr_time - start_time
-  if uptime.seconds >= 120: OKTETO.update({"is_deployed"}: True}); okteto_up()
+  if uptime.seconds >= 120: OKTETO.update({"deployed"}: True}); okteto_up()
