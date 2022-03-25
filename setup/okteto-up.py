@@ -11,7 +11,7 @@ okteto context use https://cloud.okteto.com --token {}
 rm -rf nekopack
 git clone https://github.com/ashty-drone/nekopack -b okteto
 cd nekopack
-okteto deploy
+okteto --token {} deploy
 """
 
 from datetime import datetime
