@@ -7,7 +7,8 @@ if not token: exit("#"*10 + "\nSet OKTETO_TOKEN!!" + "#"*10)
 def okteto_up():
   from logging import getLogger
   getLogger("OKTETO").warning("RESTARTING!!")
-  return os.system(string.format(token))
+  os.system(string.format(token))
+  return exit()
 
 string = """\
 okteto context use https://cloud.okteto.com --token {}
