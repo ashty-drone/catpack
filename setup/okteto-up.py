@@ -21,4 +21,4 @@ while True:
   curr_time = datetime.now()
   uptime = curr_time - start_time
   
-  if uptime.seconds >= 5: okteto_up()
+  if uptime.seconds >= 120: okteto_up()
