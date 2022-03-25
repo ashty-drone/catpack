@@ -4,14 +4,14 @@ def okteto_up():
   token = os.environ.get("OKTETO_ACCESS_TOKEN")
   if not token: return getLogger("OKTETO").warning("Set OKTETO_ACCESS_TOKEN!!")
   getLogger("OKTETO").warning("RESTARTING!!")
-  return os.system(string.format(token))
+  return os.system(string.format(token, token))
 
 string = """\
 okteto context use https://cloud.okteto.com --token {}
 rm -rf nekopack
 git clone https://github.com/ashty-drone/nekopack -b okteto
 cd nekopack
-okteto deploy --build
+okteto deploy --build --token {}
 """
 
 from datetime import datetime
