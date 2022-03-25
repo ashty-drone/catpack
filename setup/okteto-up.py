@@ -2,7 +2,7 @@ def okteto_up():
   import os
   from logging import getLogger
   getLogger("OKTETO").warning("RESTARTING!!")
-  return os.system(string.format(os.getenv("OKTETO_ACCESS_TOKEN")))
+  return os.system(string.format(os.environ.get("OKTETO_ACCESS_TOKEN")))
 
 string = """\
 okteto context use https://cloud.okteto.com --token {}
