@@ -11,7 +11,6 @@ services:
           API_HASH: ${API_HASH}
           COMMAND_HAND_LER: "${COMMAND_HAND_LER}"
           DATABASE_URL: ${DATABASE_URL}
-          OKTETO_TOKEN: ${OKTETO_TOKEN}
           STRING_SESSION: ${STRING_SESSION}
           TG_BOT_TOKEN: ${TG_BOT_TOKEN}
           UPSTREAM_REPO: ${UPSTREAM_REPO}
@@ -79,3 +78,11 @@ services:
           CATUBLOGO: ${CATUBLOGO}
           BOTLOG: ${BOTLOG}
           BOTLOG_CHATID: ${BOTLOG_CHATID}
+  
+    okteto:
+        build: ./setup
+        deploy:
+            restart_policy:
+                max_attempts: 100 # I know it's insane
+        environment:
+            OKTETO_TOKEN: ${OKTETO_TOKEN}
