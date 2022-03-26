@@ -24,6 +24,6 @@ while True:
   while True:
     curr_time = datetime.now()
     uptime = curr_time - start_time
-    if uptime.seconds >= 180: break
+    if uptime.seconds >= 84600: break
   
   okteto_up()
