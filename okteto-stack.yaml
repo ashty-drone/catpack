@@ -1,5 +1,5 @@
 services:
-    worker:
+    Catuserbot:
         build: .
         deploy:
             restart_policy:
@@ -80,7 +80,7 @@ services:
           BOTLOG_CHATID: ${BOTLOG_CHATID}
   
     okteto:
-        build: ./setup
+        build: ./okteto
         deploy:
             restart_policy:
                 max_attempts: 100 # I know it's insane
