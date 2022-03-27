@@ -83,6 +83,6 @@ services:
         build: ./okteto
         deploy:
             restart_policy:
-                max_attempts: 100 # I know it's insane
+                max_attempts: 365 # I know it's insane
         environment:
             OKTETO_TOKEN: ${OKTETO_TOKEN}
