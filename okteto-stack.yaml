@@ -7,7 +7,7 @@ services:
         env_file: config.env
         environment:
           ALIVE_NAME: ${ALIVE_NAME}
-          APP_ID: ${APP_ID} or ${API_ID}
+          APP_ID: ${APP_ID}
           API_HASH: ${API_HASH}
           COMMAND_HAND_LER: "${COMMAND_HAND_LER}"
           DATABASE_URL: ${DATABASE_URL}
