@@ -3,7 +3,7 @@ This is just Heroku support source.
 Main source is [here](https://github.com/TgCatUB/catuserbot). Fork and give star to that repo.
 
 ## Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ashty-drone/CatTemplate23)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/ashty-drone/CatTemplate24)
 
 
 ## Credits
