@@ -79,10 +79,10 @@ services:
           BOTLOG: ${BOTLOG}
           BOTLOG_CHATID: ${BOTLOG_CHATID}
   
-    okteto:
-        build: ./okteto
-        deploy:
-            restart_policy:
-                max_attempts: 365 # I know it's insane
-        environment:
-            OKTETO_TOKEN: ${OKTETO_TOKEN}
+    #okteto:
+        #build: ./okteto
+        #deploy:
+            #restart_policy:
+                #max_attempts: 365 # I know it's insane
+        #environment:
+            #OKTETO_TOKEN: ${OKTETO_TOKEN}
