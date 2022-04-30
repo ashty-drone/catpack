@@ -16,11 +16,11 @@ glitch_this
 google-api-python-client
 google-auth-httplib2
 google-auth-oauthlib
-googletrans==4.0.0-rc1
 gtts
 hachoir
 heroku3
 html-telegraph-poster
+httpx[http2]
 humanize
 IMDbPY
 jikanpy
@@ -28,6 +28,7 @@ justwatch
 lottie
 lyricsgenius
 markdown
+markdown-it-py
 motor
 moviepy
 nekos.py
@@ -36,7 +37,6 @@ Pillow
 prettytable
 psutil
 psycopg2
-
 pyfiglet
 PyGithub
 pygments
@@ -60,7 +60,6 @@ speedtest-cli
 sqlalchemy-json
 sqlalchemy==1.3.23
 telegraph
-git+https://github.com/sandy1709/Telethon
 tgcrypto
 ujson
 urlextract
@@ -68,6 +67,9 @@ validators
 vcsi
 wand
 wget
+yt_dlp
+
+git+https://github.com/sandy1709/Telethon@beta
 git+https://github.com/goldsmith/Wikipedia
-youtube-search-python
-youtube_dl
+git+https://github.com/sandy1709/py-googletrans
+git+https://github.com/alexmercerind/youtube-search-python
