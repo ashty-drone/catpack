@@ -13,5 +13,8 @@ RUN python3 -m pip install --upgrade pip && \
 # Configuring Environment
 ENV PATH="/home/userbot/bin:$PATH"
 
+# Copying Directory to image
+COPY . .
+
 # Catuserbot!
-CMD ["sh","catub.sh"]
+CMD ["sh","catub"]
