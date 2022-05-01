@@ -14,4 +14,4 @@ RUN python3 -m pip install --upgrade pip && \
 ENV PATH="/home/userbot/bin:$PATH"
 
 # Catuserbot!
-CMD ["bash","catub"]
+CMD ["sh","catub"]
