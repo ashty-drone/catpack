@@ -1,6 +1,0 @@
-if [ $COMMAND_HAND_LER ]
-then 
-  COMMAND_HAND_LER = $COMMAND_HAND_LER
-else
-  COMMAND_HAND_LER = "."
-fi
