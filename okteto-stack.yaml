@@ -79,10 +79,10 @@ services:
           BADCAT_REPO: ${BADCAT_REPO}
           BADCAT_REPOBRANCH: ${BADCAT_REPOBRANCH}
   
-    okteto:
-        build: ./okteto
-        deploy:
-            restart_policy:
-                max_attempts: 365 # I know it's insane
-        environment:
-            OKTETO_TOKEN: ${OKTETO_TOKEN}
+    #okteto:
+        #build: ./okteto
+        #deploy:
+            #restart_policy:
+                #max_attempts: 365 # I know it's insane
+        #environment:
+            #OKTETO_TOKEN: ${OKTETO_TOKEN}
