@@ -5,7 +5,7 @@ from os import system
 dotenv.load_dotenv("config.env")
 
 script = """\
-git clone https://github.com/ashty-drone/nekopack
+git clone https://github.com/TgCatUB/nekopack
 cd nekopack && bash start
 """
 
