@@ -1,0 +1,32 @@
+name: Catuserbot Worker
+
+on:
+  workflow_dispatch:
+    inputs:
+      github_username:
+        description: 'Enter your github username'
+        required: true
+      github_password:
+        description: 'Enter your personal access token'
+        required: true
+        
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: setup init
+      run: |
+        sudo apt install -y python3-pip
+        sudo apt install -y python3-dotenv
+    - name: cloning repo
+      run: |
+        wget https://raw.githubusercontent.com/TgCatUB/catuserbot/master/requirements.txt
+        git clone https://${{ github.event.inputs.github_username}}:${{ github.event.inputs.github_password}}@github.com/${{ github.event.inputs.github_username}}/nekopack
+    - name: Installing requirements
+      run: |
+        python3 -m pip install --upgrade pip wheel setuptools
+        python3 -m pip install -r requirements.txt
+    - name: start catuserbot
+      run: |
+        cd nekopack
+        python3 start
