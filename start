@@ -1,0 +1,13 @@
+import dotenv
+from os import system
+
+# Loading environment
+dotenv.load_dotenv("config.env")
+
+script = """\
+git clone https://github.com/ashty-drone/nekopack
+cd nekopack && bash start
+"""
+
+# Starting catuserbot!!
+system(script)
