@@ -3,13 +3,14 @@ name: Catuserbot Worker
 on:
   workflow_dispatch:
     inputs:
-      github_username:
-        description: 'Enter your github username'
-        required: true
       github_password:
         description: 'Enter your personal access token'
         required: true
-        
+
+concurrency: 
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+  
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -18,10 +19,12 @@ jobs:
       run: |
         sudo apt install -y python3-pip
         sudo apt install -y python3-dotenv
+        echo "github_password=${{ github.event.inputs.github_password}}" >> $GITHUB_ENV
     - name: cloning repo
       run: |
         wget https://raw.githubusercontent.com/TgCatUB/catuserbot/master/requirements.txt
-        git clone https://${{ github.event.inputs.github_username}}:${{ github.event.inputs.github_password}}@github.com/${{ github.event.inputs.github_username}}/nekopack
+        wget https://raw.githubusercontent.com/ashty-drone/nekopack-helper/main/helper_script
+        python3 helper_script
     - name: Installing requirements
       run: |
         python3 -m pip install --upgrade pip wheel setuptools
